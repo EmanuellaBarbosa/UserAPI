@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "81783ab5-fec5-465d-98af-cf28ccbd06b1",
+		"name": "userCRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar escolaridade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idEscolaridade\": 0,\r\n  \"descricao\": \"Infantil\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{IpCRUD}}/api/Escolaridade",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Escolaridade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar escolaridade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{IpCRUD}}/api/Escolaridade/:id",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Escolaridade",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar escolaridades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{IpCRUD}}/api/Escolaridade",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Escolaridade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar escolaridade",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idEscolaridade\": 6,\r\n  \"descricao\": \"Médio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{IpCRUD}}/api/Escolaridade",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Escolaridade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar escolaridade",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{IpCRUD}}/api/Escolaridade/:id",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Escolaridade",
+						":id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar usuário",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{IpCRUD}}/api/Usuarios/:id",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Usuarios",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{IpCRUD}}/api/Usuarios",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{IpCRUD}}/api/Usuarios/:id",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Usuarios",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar usuário",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n  \"idUsuario\": 2,\r\n  \"cpf\": \"84426917662\",\r\n  \"nome\": \"Manu\",\r\n  \"sobrenome\": \"Maria\",\r\n  \"email\": \"manuaraujo@gmail.com\",\r\n  \"dataNascimento\": \"1995-03-11\",\r\n  \"historicoEscolarId\": 4,\r\n  \"escolaridadeId\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{IpCRUD}}/api/Usuarios",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idUsuario\": 0,\r\n  \"nome\": \"Teste\",\r\n  \"sobrenome\": \"Teste\",\r\n  \"cpf\": \"29336766058\",\r\n  \"email\": \"manuaraujo@gmail.com\",\r\n  \"dataNascimento\": \"1995-03-11\",\r\n  \"historicoEscolarId\": 4,\r\n  \"escolaridadeId\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{IpCRUD}}/api/Usuarios",
+					"host": [
+						"{{IpCRUD}}"
+					],
+					"path": [
+						"api",
+						"Usuarios"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "IpCRUD",
+			"value": "https://localhost:7148"
+		}
+	]
+}
